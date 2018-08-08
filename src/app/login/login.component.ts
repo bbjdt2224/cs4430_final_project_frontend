@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
 
     // redirect to login screen
     next() {
-        this.router.navigate(['/incidents']);
+        this.router.navigate(['/accounts']);
     }
 
 }
