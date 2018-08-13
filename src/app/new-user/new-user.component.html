@@ -1,0 +1,23 @@
+<div class="container">
+    <br>
+    <!--Error message if email is already used-->
+    <p style="color: red;">{{error}}</p>
+    <form>
+
+        <!--email-->
+        Email:
+        <input #email type="text" class="form-control" [(ngModel)]="user.email" name="email">
+
+        <!--password-->
+        Password:
+        <input #password type="password" class="form-control" [(ngModel)]="user.password" name="password">
+
+        <br>
+
+        <!--submit button-->
+        <button (click)="addUser()" class="btn btn-info">SignUp</button>
+
+        <!--back button-->
+        <button type="button" class="btn btn-danger" routerLink="/login">Cancel</button>
+    </form>
+</div>

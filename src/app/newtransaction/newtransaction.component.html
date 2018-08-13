@@ -1,0 +1,11 @@
+<div class="container">
+    <br>
+    <input type="date" class="form-control" [(ngModel)]="transaction.date">
+    <br>
+    <input [(ngModel)]="transaction.vendor" type="text" class="form-control" placeholder="vendor">
+    <br>
+    <input type="number" step="0.01" class="form-control" [(ngModel)]="transaction.amount">
+    <br>
+    <button class="btn btn-success" (click)="submit()">Create</button>
+  </div>
+  

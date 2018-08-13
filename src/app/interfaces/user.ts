@@ -4,8 +4,6 @@ export class User {
     lastName: string;
     email: string;
     password: string;
-    isTracker: boolean;
-    role: string;
     createdAt: Date;
     updatedAt: Date;
 }

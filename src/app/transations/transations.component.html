@@ -1,0 +1,18 @@
+<br>
+<div class="container">
+  <button class="btn btn-success" (click)="newTransaction()">Create Transaction</button>
+  <br>
+  <div class="well" *ngFor="let transaction of transactions">
+    <div class="row">
+      <div class="col-md-4">
+        <span [innerText]="transaction.date | date:'MM/dd/yyyy'"></span>
+      </div>
+      <div class="col-md-4">
+        <span [innerText]="transaction.vendor"></span>
+      </div>
+      <div class="col-md-4">
+        <span>$</span><span [innerText]="transaction.amount | number: '2.2'"></span>
+      </div>
+    </div>
+  </div>
+</div>

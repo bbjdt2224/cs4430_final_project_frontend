@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
-import { User } from '../interfaces/user';
+import { User } from '../interfaces';
 
 const httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -39,8 +39,7 @@ export class UserService {
     update(user: User): Observable<any> {
         return this.http.put('/api/user/' + user.id, {
             'firstName': user.firstName,
-            'lastName': user.lastName,
-            'role': user.role
+            'lastName': user.lastName
         }, httpOptions);
     }
 
@@ -48,8 +47,7 @@ export class UserService {
     newUser(user: User): Observable<any> {
         return this.http.post('/api/signup', {
             'email': user.email,
-            'password': user.password,
-            'isTracker': user.isTracker
+            'password': user.password
         }, httpOptions);
     }
 
